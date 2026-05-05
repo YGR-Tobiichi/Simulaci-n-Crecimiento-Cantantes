@@ -57,23 +57,28 @@
         </Grid.RowDefinitions>
 
         <!-- Header -->
-        <Border Grid.Row="0" Background="{StaticResource PanelBrush}" CornerRadius="10" Padding="12" Margin="0,0,0,10" Grid.ColumnSpan="2">
+        <Border Grid.Row="0" Background="{StaticResource PanelBrush}" CornerRadius="10" Padding="5,0,0,0" Margin="0,0,0,10" Grid.ColumnSpan="2">
             <DockPanel LastChildFill="True" VerticalAlignment="Center">
                 <!-- Identity -->
                 <StackPanel Orientation="Horizontal" DockPanel.Dock="Left" VerticalAlignment="Center">
                     <!-- Avatar -->
-                    <Border Width="48" Height="48" CornerRadius="24" Background="{StaticResource AccentBrush}" VerticalAlignment="Center" Margin="0,0,12,0">
-                        <TextBlock Text="A" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Border Width="48" Height="48" CornerRadius="24" Background="{StaticResource MutedBrush}" VerticalAlignment="Center" Margin="0,0,12,0">
+                        <Image Source="C:\Users\mauro\OneDrive\Pictures\Img docs/Yukari.png" ClipToBounds="True" />
+                        <!--<TextBlock Text="A" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>-->
                     </Border>
                     <StackPanel Orientation="Vertical" VerticalAlignment="Center">
-                        <TextBlock Text="Artista: Nombre Artístico" Foreground="{StaticResource LightText}" FontSize="14" FontWeight="SemiBold"/>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock Text="Artista: " Foreground="{StaticResource LightText}" FontSize="14" FontWeight="SemiBold"/>
+                            <TextBlock Text="{Binding nombreArtista}" Foreground="{StaticResource LightText}" FontSize="14" FontWeight="SemiBold"/>
+                        </StackPanel>
                         <TextBlock Text="Semana: 3" Foreground="{StaticResource LightText}" FontSize="12" Opacity="0.9"/>
                     </StackPanel>
                 </StackPanel>
 
                 <!-- Right side placeholder for status/icons -->
-                <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" VerticalAlignment="Center" Margin="15,0,0,0">
-                    <TextBlock Text="Estado: Activo" Foreground="{StaticResource LightText}" Opacity="0.9"/>
+                <StackPanel DockPanel.Dock="Right" VerticalAlignment="Center" Margin="15,0,0,0">
+                    
+                    <!--<Image Source="C:/Users/mauro/OneDrive/Pictures/Miku/Miku.jpg" Stretch="Fill"  Margin="0,0,6,0"/>-->
                 </StackPanel>
             </DockPanel>
         </Border>

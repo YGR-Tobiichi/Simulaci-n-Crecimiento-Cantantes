@@ -9,6 +9,7 @@ namespace U5PSC24100562
     /// </summary>
     public partial class App : Application
     {
+        public static Simulacion sim = new Simulacion();
     }
 
 }

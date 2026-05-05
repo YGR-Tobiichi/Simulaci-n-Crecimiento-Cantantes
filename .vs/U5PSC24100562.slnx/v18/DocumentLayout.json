@@ -1,22 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Tobiichi\\source\\repos\\U5PSC24100562\\",
+  "WorkspaceRootPath": "C:\\Users\\mauro\\source\\repos\\Simulaci-n-Crecimiento-Cantantes\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8A2A2DFE-23E7-B3C1-8A44-C8971CA8A888}|U5PSC24100562\\U5PSC24100562.csproj|c:\\users\\tobiichi\\source\\repos\\u5psc24100562\\u5psc24100562\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{8A2A2DFE-23E7-B3C1-8A44-C8971CA8A888}|U5PSC24100562\\U5PSC24100562.csproj|c:\\users\\mauro\\source\\repos\\simulaci-n-crecimiento-cantantes\\u5psc24100562\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{8A2A2DFE-23E7-B3C1-8A44-C8971CA8A888}|U5PSC24100562\\U5PSC24100562.csproj|solutionrelative:u5psc24100562\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A2A2DFE-23E7-B3C1-8A44-C8971CA8A888}|U5PSC24100562\\U5PSC24100562.csproj|c:\\users\\tobiichi\\source\\repos\\u5psc24100562\\u5psc24100562\\datosiniciales.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8A2A2DFE-23E7-B3C1-8A44-C8971CA8A888}|U5PSC24100562\\U5PSC24100562.csproj|solutionrelative:u5psc24100562\\datosiniciales.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{8A2A2DFE-23E7-B3C1-8A44-C8971CA8A888}|U5PSC24100562\\U5PSC24100562.csproj|c:\\users\\mauro\\source\\repos\\simulaci-n-crecimiento-cantantes\\u5psc24100562\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A2A2DFE-23E7-B3C1-8A44-C8971CA8A888}|U5PSC24100562\\U5PSC24100562.csproj|solutionrelative:u5psc24100562\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A2A2DFE-23E7-B3C1-8A44-C8971CA8A888}|U5PSC24100562\\U5PSC24100562.csproj|c:\\users\\tobiichi\\source\\repos\\u5psc24100562\\u5psc24100562\\datosiniciales.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8A2A2DFE-23E7-B3C1-8A44-C8971CA8A888}|U5PSC24100562\\U5PSC24100562.csproj|c:\\users\\mauro\\source\\repos\\simulaci-n-crecimiento-cantantes\\u5psc24100562\\datosiniciales.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A2A2DFE-23E7-B3C1-8A44-C8971CA8A888}|U5PSC24100562\\U5PSC24100562.csproj|solutionrelative:u5psc24100562\\datosiniciales.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A2A2DFE-23E7-B3C1-8A44-C8971CA8A888}|U5PSC24100562\\U5PSC24100562.csproj|c:\\users\\tobiichi\\source\\repos\\u5psc24100562\\u5psc24100562\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A2A2DFE-23E7-B3C1-8A44-C8971CA8A888}|U5PSC24100562\\U5PSC24100562.csproj|solutionrelative:u5psc24100562\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A2A2DFE-23E7-B3C1-8A44-C8971CA8A888}|U5PSC24100562\\U5PSC24100562.csproj|c:\\users\\mauro\\source\\repos\\simulaci-n-crecimiento-cantantes\\u5psc24100562\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A2A2DFE-23E7-B3C1-8A44-C8971CA8A888}|U5PSC24100562\\U5PSC24100562.csproj|solutionrelative:u5psc24100562\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A2A2DFE-23E7-B3C1-8A44-C8971CA8A888}|U5PSC24100562\\U5PSC24100562.csproj|c:\\users\\mauro\\source\\repos\\simulaci-n-crecimiento-cantantes\\u5psc24100562\\datosiniciales.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8A2A2DFE-23E7-B3C1-8A44-C8971CA8A888}|U5PSC24100562\\U5PSC24100562.csproj|solutionrelative:u5psc24100562\\datosiniciales.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,40 +30,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DatosIniciales.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Tobiichi\\source\\repos\\U5PSC24100562\\U5PSC24100562\\DatosIniciales.xaml.cs",
-              "RelativeDocumentMoniker": "U5PSC24100562\\DatosIniciales.xaml.cs",
-              "ToolTip": "C:\\Users\\Tobiichi\\source\\repos\\U5PSC24100562\\U5PSC24100562\\DatosIniciales.xaml.cs",
-              "RelativeToolTip": "U5PSC24100562\\DatosIniciales.xaml.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAnwBgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T04:15:30.013Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DatosIniciales.xaml",
-              "DocumentMoniker": "C:\\Users\\Tobiichi\\source\\repos\\U5PSC24100562\\U5PSC24100562\\DatosIniciales.xaml",
-              "RelativeDocumentMoniker": "U5PSC24100562\\DatosIniciales.xaml",
-              "ToolTip": "C:\\Users\\Tobiichi\\source\\repos\\U5PSC24100562\\U5PSC24100562\\DatosIniciales.xaml",
-              "RelativeToolTip": "U5PSC24100562\\DatosIniciales.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-05T02:22:38.25Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Tobiichi\\source\\repos\\U5PSC24100562\\U5PSC24100562\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\mauro\\source\\repos\\Simulaci-n-Crecimiento-Cantantes\\U5PSC24100562\\MainWindow.xaml",
               "RelativeDocumentMoniker": "U5PSC24100562\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Tobiichi\\source\\repos\\U5PSC24100562\\U5PSC24100562\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\mauro\\source\\repos\\Simulaci-n-Crecimiento-Cantantes\\U5PSC24100562\\MainWindow.xaml",
               "RelativeToolTip": "U5PSC24100562\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-05-05T00:02:53.51Z",
@@ -67,15 +46,53 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DatosIniciales.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\mauro\\source\\repos\\Simulaci-n-Crecimiento-Cantantes\\U5PSC24100562\\DatosIniciales.xaml.cs",
+              "RelativeDocumentMoniker": "U5PSC24100562\\DatosIniciales.xaml.cs",
+              "ToolTip": "C:\\Users\\mauro\\source\\repos\\Simulaci-n-Crecimiento-Cantantes\\U5PSC24100562\\DatosIniciales.xaml.cs",
+              "RelativeToolTip": "U5PSC24100562\\DatosIniciales.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAADwvxgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T04:15:30.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\mauro\\source\\repos\\Simulaci-n-Crecimiento-Cantantes\\U5PSC24100562\\App.xaml.cs",
+              "RelativeDocumentMoniker": "U5PSC24100562\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\mauro\\source\\repos\\Simulaci-n-Crecimiento-Cantantes\\U5PSC24100562\\App.xaml.cs",
+              "RelativeToolTip": "U5PSC24100562\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T13:54:02.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Tobiichi\\source\\repos\\U5PSC24100562\\U5PSC24100562\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\mauro\\source\\repos\\Simulaci-n-Crecimiento-Cantantes\\U5PSC24100562\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "U5PSC24100562\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Tobiichi\\source\\repos\\U5PSC24100562\\U5PSC24100562\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\mauro\\source\\repos\\Simulaci-n-Crecimiento-Cantantes\\U5PSC24100562\\MainWindow.xaml.cs",
               "RelativeToolTip": "U5PSC24100562\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAUwDIAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-05T00:02:52.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DatosIniciales.xaml",
+              "DocumentMoniker": "C:\\Users\\mauro\\source\\repos\\Simulaci-n-Crecimiento-Cantantes\\U5PSC24100562\\DatosIniciales.xaml",
+              "RelativeDocumentMoniker": "U5PSC24100562\\DatosIniciales.xaml",
+              "ToolTip": "C:\\Users\\mauro\\source\\repos\\Simulaci-n-Crecimiento-Cantantes\\U5PSC24100562\\DatosIniciales.xaml",
+              "RelativeToolTip": "U5PSC24100562\\DatosIniciales.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-05T02:22:38.25Z",
               "EditorCaption": ""
             }
           ]

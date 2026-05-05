@@ -20,7 +20,9 @@ namespace U5PSC24100562
         public DatosIniciales()
         {
             InitializeComponent();
+            DataContext = App.sim;
+            App.sim.seguidores = 1000;
+            App.sim.nombreArtista = "Yukari";
         }
-
     }
 }
