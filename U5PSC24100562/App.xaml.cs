@@ -1,6 +1,7 @@
 ﻿using System.Configuration;
 using System.Data;
 using System.Windows;
+using static U5PSC24100562.MainWindow;
 
 namespace U5PSC24100562
 {
