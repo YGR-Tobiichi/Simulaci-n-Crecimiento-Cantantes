@@ -19,19 +19,18 @@ namespace U5PSC24100562
     public partial class MainWindow : Window
     {
         DatosIniciales ventana = new DatosIniciales();
-        double calidad = 0.7;
         double nuevosSeguidores = 0;
         public MainWindow()
         {
             InitializeComponent();
             DataContext = App.sim;
             ventana.Show();
-            App.sim.fatiga = App.sim.fatiga + 0.05;
-            App.sim.engagement = App.sim.engagement + (0.1 * calidad) - (0.1*App.sim.fatiga);
-            nuevosSeguidores = Math.Round(App.sim.seguidores * App.sim.engagement*calidad*1.5);
-            App.sim.seguidores = App.sim.seguidores + (int)nuevosSeguidores;
         }
-        
+
+        private void btnAvanzarCiclo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
     public class Simulacion : INotifyPropertyChanged
@@ -40,6 +39,7 @@ namespace U5PSC24100562
         private int _seguidores;
         private double _engagement;
         private double _fatiga;
+        private bool _iniciar;
 
         public string nombreArtista
         {
@@ -117,6 +117,15 @@ namespace U5PSC24100562
                 }
             }
         }
+        public bool iniciar
+        {
+            get => _iniciar;
+            set
+            {
+                _iniciar = value;
+                OnPropertyChanged(nameof(iniciar));
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -126,9 +135,11 @@ namespace U5PSC24100562
         }
         public Simulacion()
         {
+            nombreArtista = " ";
             seguidores = 300;
             engagement = 0.08;
             fatiga = 0.1;
+            iniciar = false;
         }
     }
 }

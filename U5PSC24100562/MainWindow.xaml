@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:U5PSC24100562"
         mc:Ignorable="d"
-        Title="MainWindow" Height="670" Width="1125" Background="#071226">
+        Title="MainWindow" Height="670" Width="1125" WindowStyle="ToolWindow">
     <Window.Resources>
         <!-- Palette -->
         <SolidColorBrush x:Key="BackgroundBrush" Color="#071226"/>
@@ -45,8 +45,11 @@
             <Setter Property="FontWeight" Value="Bold" />
         </Style>
     </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="/Images/FondoBonitoParaSim.jpg"/>
+    </Window.Background>
 
-    <Grid Background="{StaticResource BackgroundBrush}" Margin="12">
+    <Grid Margin="12">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="599*"/>
             <ColumnDefinition Width="477*"/>
@@ -63,7 +66,7 @@
                 <StackPanel Orientation="Horizontal" DockPanel.Dock="Left" VerticalAlignment="Center">
                     <!-- Avatar -->
                     <Border Width="48" Height="48" CornerRadius="24" Background="{StaticResource MutedBrush}" VerticalAlignment="Center" Margin="0,0,12,0">
-                        <Image Source="C:\Users\mauro\OneDrive\Pictures\Img docs/Yukari.png" ClipToBounds="True" />
+                        <Image Source="/Images/Yukari.png" ClipToBounds="True" />
                         <!--<TextBlock Text="A" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>-->
                     </Border>
                     <StackPanel Orientation="Vertical" VerticalAlignment="Center">
@@ -71,14 +74,17 @@
                             <TextBlock Text="Artista: " Foreground="{StaticResource LightText}" FontSize="14" FontWeight="SemiBold"/>
                             <TextBlock Text="{Binding nombreArtista}" Foreground="{StaticResource LightText}" FontSize="14" FontWeight="SemiBold"/>
                         </StackPanel>
-                        <TextBlock Text="Semana: 3" Foreground="{StaticResource LightText}" FontSize="12" Opacity="0.9"/>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock Text="Semana:" Foreground="{StaticResource LightText}" FontSize="12" Opacity="0.9"/>
+                            <TextBlock Text="{Binding semana}" Foreground="{StaticResource LightText}" FontSize="12" Opacity="0.9" Margin="6,0,0,0"/>
+                        </StackPanel>
                     </StackPanel>
                 </StackPanel>
 
                 <!-- Right side placeholder for status/icons -->
                 <StackPanel DockPanel.Dock="Right" VerticalAlignment="Center" Margin="15,0,0,0">
-                    
-                    <!--<Image Source="C:/Users/mauro/OneDrive/Pictures/Miku/Miku.jpg" Stretch="Fill"  Margin="0,0,6,0"/>-->
+
+                    <!--<Image Source="/Images/FondoBonitoParaSim.jpg" Margin="0,0,6,0"/>-->
                 </StackPanel>
             </DockPanel>
         </Border>
@@ -129,7 +135,7 @@
                             <TextBlock Text="Nivel de fatiga actual" Foreground="{StaticResource LightText}" Opacity="0.9" FontSize="12"/>
 
                         </Grid>
-                              
+
                     </StackPanel>
                 </Border>
 
@@ -159,9 +165,7 @@
                 <Border Background="{StaticResource CardBrush}" CornerRadius="10" Padding="12" Height="360" Margin="0,0,0,12">
                     <StackPanel>
                         <TextBlock Text="Registro de eventos" Foreground="{StaticResource LightText}" FontSize="14" FontWeight="SemiBold" />
-                        <ListBox x:Name="lbLogEventos" Background="#0B2230" BorderThickness="0" Foreground="{StaticResource LightText}" Margin="0,8,0,0">
-                            <ListBoxItem>Inicio de simulación: ciclo 1 - éxito</ListBoxItem>
-                        </ListBox>
+                        <ListBox x:Name="lbLogEventos" Background="#0B2230" BorderThickness="0" Foreground="{StaticResource LightText}" Margin="0,8,0,0"/>
                     </StackPanel>
                 </Border>
 
@@ -170,9 +174,8 @@
                     <StackPanel HorizontalAlignment="Center">
                         <TextBlock Text="Controles" Foreground="{StaticResource LightText}" FontSize="14" FontWeight="SemiBold" HorizontalAlignment="Center" />
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,12,0,0">
-                            <Button Style="{StaticResource AccentButton}" Width="110" Content="Avanzar ciclo"/>
-                            <Button Background="#2B3F55" Foreground="{StaticResource LightText}" Width="90" Margin="6" Content="Pausa"/>
-                            <Button Background="#2B3F55" Foreground="{StaticResource LightText}" Width="90" Margin="6" Content="Reiniciar"/>
+                            <Button x:Name="btnAvanzarCiclo" Style="{StaticResource AccentButton}" Width="110" Content="Avanzar ciclo" Click="btnAvanzarCiclo_Click" IsEnabled="{Binding iniciar}"/>
+                            <Button x:Name="btnPausar" Background="#2B3F55" Foreground="{StaticResource LightText}" Width="90" Margin="6" Content="Pausa" IsEnabled="{Binding iniciar}"/>
                         </StackPanel>
                     </StackPanel>
                 </Border>

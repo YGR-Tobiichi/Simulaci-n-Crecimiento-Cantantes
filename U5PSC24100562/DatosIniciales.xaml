@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:U5PSC24100562"
         mc:Ignorable="d"
-        Title="DatosIniciales" Height="400" Width="400" Background="#0F172A">
+        Title="DatosIniciales" Height="400" Width="400" WindowStyle="ToolWindow">
     <Window.Resources>
         <!-- Palette -->
         <SolidColorBrush x:Key="BackgroundBrush" Color="#071226"/>
@@ -45,6 +45,9 @@
             <Setter Property="FontWeight" Value="Bold" />
         </Style>
     </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="/Images/abstract-fluid-liquid-dark-colorful-hd-wallpaper-preview.jpg"/>
+    </Window.Background>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -53,7 +56,42 @@
         </Grid.RowDefinitions>
 
         <Border Grid.Row="0" CornerRadius="5" Margin="5" Background="{StaticResource PanelBrush}" Padding="20">
-            <TextBlock Text="Datos iniciales para la simulación" Foreground="{StaticResource LightText}" FontSize="22" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <TextBlock Text="Datos iniciales para la simulación" Foreground="{StaticResource LightText}" FontSize="19" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
+
+        <Border Grid.Row="1" CornerRadius="5" Margin="5" Padding="5" Background="{DynamicResource PanelBrush}">
+            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                    <TextBlock Text="Seguidores iniciales:" Style="{StaticResource CardTitle}" VerticalAlignment="Center" Padding="5"/>
+                    <TextBox x:Name="txtSegudores" Width="100" Background="{StaticResource CardBrush}" Foreground="{StaticResource LightText}" BorderThickness="0" Padding="6"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                    <TextBlock Text="Número de semanas a simular:" Style="{StaticResource CardTitle}" VerticalAlignment="Center" Padding="5"/>
+                    <TextBox x:Name="txtTiempoSimulacion" Width="100" Background="{StaticResource CardBrush}" Foreground="{StaticResource LightText}" BorderThickness="0" Padding="6"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                    <TextBlock Text="Nombre del artista:" Style="{StaticResource CardTitle}" VerticalAlignment="Center" Padding="5"/>
+                    <TextBox x:Name="txtNombreArtista" Width="100" Background="{StaticResource CardBrush}" Foreground="{StaticResource LightText}" BorderThickness="0" Padding="6"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                    <TextBlock Text="Intervalo de lanzamiento (semanas):" Style="{StaticResource CardTitle}" VerticalAlignment="Center" Padding="5"/>
+                    <ComboBox x:Name="cbIntervaloLanzamiento" Width="100" BorderThickness="0" Padding="6">
+                        <ComboBoxItem Content="1"/>
+                        <ComboBoxItem Content="2"/>
+                        <ComboBoxItem Content="3"/>
+                        <ComboBoxItem Content="4"/>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                    <TextBlock Text="Valor de marketing:" Style="{StaticResource CardTitle}" VerticalAlignment="Center" Padding="5"/>
+                    <ComboBox x:Name="cbMarketing" Width="100" BorderThickness="0" Padding="6">
+                        <ComboBoxItem Content="1.0"/>
+                        <ComboBoxItem Content="1.5"/>
+                        <ComboBoxItem Content="2.0"/>
+                    </ComboBox>
+                </StackPanel>
+                <Button x:Name="btnIniciarSimulacion" Content="Iniciar Simulación" Style="{StaticResource AccentButton}" Click="btnIniciarSimulacion_Click"/>
+            </StackPanel>
         </Border>
     </Grid>
 </Window>

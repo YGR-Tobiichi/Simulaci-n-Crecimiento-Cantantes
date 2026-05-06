@@ -8,4 +8,16 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Images\abstract-fluid-liquid-dark-colorful-hd-wallpaper-preview.jpg" />
+    <None Remove="Images\FondoBonitoParaSim.jpg" />
+    <None Remove="Images\Yukari.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\abstract-fluid-liquid-dark-colorful-hd-wallpaper-preview.jpg" />
+    <Resource Include="Images\FondoBonitoParaSim.jpg" />
+    <Resource Include="Images\Yukari.png" />
+  </ItemGroup>
+
 </Project>

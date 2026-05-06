@@ -21,8 +21,19 @@ namespace U5PSC24100562
         {
             InitializeComponent();
             DataContext = App.sim;
-            App.sim.seguidores = 1000;
-            App.sim.nombreArtista = "Yukari";
+        }
+
+        private void btnIniciarSimulacion_Click(object sender, RoutedEventArgs e)
+        {
+            App.sim.seguidores = int.Parse(txtSegudores.Text);
+            App.semanasSimulacion = int.Parse(txtTiempoSimulacion.Text);
+            App.intervaloSemana = int.Parse(cbIntervaloLanzamiento.Text);
+            App.sim.nombreArtista = txtNombreArtista.Text;
+            App.estrategiaMarketing = double.Parse(cbMarketing.Text);
+            //App.sim.fatiga = App.sim.fatiga + 0.05;
+            //App.sim.engagement = App.sim.engagement + (0.1 * App.calidad) - (0.1 * App.sim.fatiga);
+            App.sim.iniciar = true;
+            this.Close();
         }
     }
 }
