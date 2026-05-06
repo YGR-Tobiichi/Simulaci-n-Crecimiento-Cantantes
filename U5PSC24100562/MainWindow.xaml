@@ -163,9 +163,9 @@
             <StackPanel Grid.Column="1" Orientation="Vertical" Grid.ColumnSpan="2" Margin="466,0,0,0" HorizontalAlignment="Left" Width="340">
                 <!-- Logs -->
                 <Border Background="{StaticResource CardBrush}" CornerRadius="10" Padding="12" Height="360" Margin="0,0,0,12">
-                    <StackPanel>
+                    <StackPanel Height="336">
                         <TextBlock Text="Registro de eventos" Foreground="{StaticResource LightText}" FontSize="14" FontWeight="SemiBold" />
-                        <ListBox x:Name="lbLogEventos" Background="#0B2230" BorderThickness="0" Foreground="{StaticResource LightText}" Margin="0,8,0,0"/>
+                        <ListBox x:Name="lbLogEventos" Height="309" ScrollViewer.VerticalScrollBarVisibility="Visible" Background="#0B2230" BorderThickness="0" Foreground="{StaticResource LightText}" Margin="0,8,0,0"/>
                     </StackPanel>
                 </Border>
 

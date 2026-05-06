@@ -37,7 +37,7 @@ namespace U5PSC24100562
             {
                 semanasPasadas = 0;
                 lanzamiento = true;
-                if (random.NextDouble() < 0.05)
+                if (random.NextDouble() < 0.05 && App.calidad > 0.7)
                     viral = true;
             }
             else
@@ -66,6 +66,7 @@ namespace U5PSC24100562
             }
             App.sim.seguidores = (int)(App.sim.seguidores + nuevosSeguidores);
             App.sim.semanaActual++;
+            viral = false;
             if (App.sim.semanaActual >= App.semanasSimulacion)
             {
                 MessageBox.Show($"Simulación finalizada. Total de seguidores: {App.sim.seguidores}");
