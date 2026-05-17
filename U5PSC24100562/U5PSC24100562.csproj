@@ -2,20 +2,29 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net10.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\2284997_ee5b2.gif" />
     <None Remove="Images\abstract-fluid-liquid-dark-colorful-hd-wallpaper-preview.jpg" />
+    <None Remove="Images\disc-spinning.gif" />
     <None Remove="Images\FondoBonitoParaSim.jpg" />
     <None Remove="Images\Yukari.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="LiveChartsCore.SkiaSharpView.WPF" Version="2.0.2" />
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\2284997_ee5b2.gif" />
     <Resource Include="Images\abstract-fluid-liquid-dark-colorful-hd-wallpaper-preview.jpg" />
+    <Resource Include="Images\disc-spinning.gif" />
     <Resource Include="Images\FondoBonitoParaSim.jpg" />
     <Resource Include="Images\Yukari.png" />
   </ItemGroup>

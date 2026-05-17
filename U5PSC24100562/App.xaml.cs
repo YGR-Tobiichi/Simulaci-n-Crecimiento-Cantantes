@@ -14,7 +14,6 @@ namespace U5PSC24100562
         public static int intervaloSemana;
         public static double estrategiaMarketing;
         public static int semanasSimulacion;
-        public static double calidad = 0.7;
     }
 
 }

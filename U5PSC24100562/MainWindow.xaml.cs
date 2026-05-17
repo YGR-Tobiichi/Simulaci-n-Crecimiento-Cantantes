@@ -21,8 +21,6 @@ namespace U5PSC24100562
         DatosIniciales ventana = new DatosIniciales();
         int semanasPasadas = 0;
         Random random = new Random();
-        bool lanzamiento = false;
-        bool viral = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -32,19 +30,18 @@ namespace U5PSC24100562
 
         private void btnAvanzarCiclo_Click(object sender, RoutedEventArgs e)
         {
-            double nuevosSeguidores = 0;
+            App.sim.NuevosSeguidores = 0;
             if (semanasPasadas == App.intervaloSemana - 1 || App.sim.semanaActual == 0)
             {
                 semanasPasadas = 0;
-                lanzamiento = true;
-                if (random.NextDouble() < 0.05 && App.calidad > 0.7)
-                    viral = true;
+                App.sim.Lanzamiento = true;
+                if (random.NextDouble() < 0.05 && App.sim.Calidad > 0.7)
+                    App.sim.Viral = true;
             }
             else
             {
-                lanzamiento = false;
+                App.sim.Lanzamiento = false;
                 semanasPasadas++;
-                App.calidad = 0.5;
                 App.sim.fatiga = App.sim.fatiga - 0.03;
                 if (random.NextDouble() < 0.05)
                 {
@@ -52,27 +49,32 @@ namespace U5PSC24100562
                     App.sim.seguidores = (int)(App.sim.seguidores * 0.95);
                 }
                 else
-                    nuevosSeguidores = App.sim.seguidores * (App.sim.engagement * 0.1);
+                    App.sim.NuevosSeguidores = App.sim.seguidores * (App.sim.engagement * 0.1);
             }
-            if (lanzamiento)
+            if (App.sim.Lanzamiento)
             {
-                App.calidad = 0.7;
-                App.calidad = App.calidad + ((random.NextDouble() * 0.4) - 0.2);
+                App.sim.Calidad = 0.7;
+                if (App.intervaloSemana == 1)
+                    App.sim.Calidad = 0.6 + ((random.NextDouble() * 0.2) - 0.1);
+                else if (App.intervaloSemana == 2)
+                    App.sim.Calidad = 0.7 + ((random.NextDouble() * 0.2) - 0.1);
+                else 
+                    App.sim.Calidad = App.sim.Calidad + ((random.NextDouble() * 0.4) - 0.2);
                 App.sim.fatiga = App.sim.fatiga + 0.05;
-                App.sim.engagement = App.sim.engagement + (0.1 * App.calidad) - (0.1 * App.sim.fatiga);
-                nuevosSeguidores = App.sim.seguidores * App.sim.engagement * App.calidad * App.estrategiaMarketing;
-                if (viral)
-                    nuevosSeguidores = nuevosSeguidores * 2;
+                App.sim.engagement = App.sim.engagement + (0.1 * App.sim.Calidad) - (0.1 * App.sim.fatiga);
+                App.sim.NuevosSeguidores = App.sim.seguidores * App.sim.engagement * App.sim.Calidad * App.estrategiaMarketing;
+                if (App.sim.Viral)
+                    App.sim.NuevosSeguidores = App.sim.NuevosSeguidores * 2;
             }
-            App.sim.seguidores = (int)(App.sim.seguidores + nuevosSeguidores);
+            App.sim.seguidores = (int)(App.sim.seguidores + Math.Round(App.sim.NuevosSeguidores));
             App.sim.semanaActual++;
-            viral = false;
+            App.sim.Viral = false;
             if (App.sim.semanaActual >= App.semanasSimulacion)
             {
                 MessageBox.Show($"Simulación finalizada. Total de seguidores: {App.sim.seguidores}");
                 btnAvanzarCiclo.IsEnabled = false;
             }
-            lbLogEventos.Items.Add($"Semana: {App.sim.semanaActual}\n Seguidores: {App.sim.seguidores}\n Engagement: {App.sim.engagement:F2}\n Fatiga: {App.sim.fatiga:F2}\n Calidad: {App.calidad:F2}\n Lanzamiento: {(lanzamiento ? "Sí" : "No")}\n Viral: {(viral ? "Sí" : "No")}\n");
+            lbLogEventos.Items.Add($"Semana: {App.sim.semanaActual}\n Seguidores: {App.sim.seguidores}\n Engagement: {App.sim.engagement:F2}\n Fatiga: {App.sim.fatiga:F2}\n Calidad: {App.sim.Calidad:F2}\n Lanzamiento: {(App.sim.Lanzamiento ? "Sí" : "No")}\n Viral: {(App.sim.Viral ? "Sí" : "No")}\n");
         }
 
         public class Simulacion : INotifyPropertyChanged
@@ -83,6 +85,10 @@ namespace U5PSC24100562
             private double _fatiga;
             private bool _iniciar;
             private int _semanaActual;
+            private double _calidad;
+            private bool _lanzamiento;
+            private bool _viral;
+            private double _nuevosSeguidores;
 
             public string nombreArtista
             {
@@ -186,6 +192,48 @@ namespace U5PSC24100562
                     }
                 }
             }
+            public double Calidad
+            {
+                get => _calidad;
+                set
+                {
+                    if (value > 1)
+                    {
+                        _calidad = 1;
+                        return;
+                    }
+                    _calidad = value;
+                    OnPropertyChanged(nameof(Calidad));
+                }
+            }
+            public bool Lanzamiento
+            {
+                get => _lanzamiento;
+                set
+                {
+                    _lanzamiento = value;
+                    OnPropertyChanged(nameof(Lanzamiento));
+                }
+            }
+            public bool Viral
+            {
+                get => _viral;
+                set
+                {
+                    _viral = value;
+                    OnPropertyChanged(nameof(Viral));
+                }
+            }
+            public double NuevosSeguidores
+            {
+                get => _nuevosSeguidores;
+                set
+                {
+                    _nuevosSeguidores = value;
+                    OnPropertyChanged(nameof(NuevosSeguidores));
+                }
+            }
+
 
             public event PropertyChangedEventHandler PropertyChanged;
 
@@ -201,6 +249,10 @@ namespace U5PSC24100562
                 fatiga = 0.1;
                 iniciar = false;
                 semanaActual = 0;
+                Calidad = 0.7;
+                Lanzamiento = false;
+                Viral = false;
+                NuevosSeguidores = 0;
             }
         }
     }
